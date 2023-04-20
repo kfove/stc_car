@@ -1,0 +1,1 @@
+"bluecon.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\bluecon.lst) OBJECT(.\Objects\bluecon.obj)

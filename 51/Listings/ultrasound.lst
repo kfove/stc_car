@@ -1,0 +1,46 @@
+C51 COMPILER V9.54   ULTRASOUND                                                            04/20/2023 15:16:36 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE ULTRASOUND
+OBJECT MODULE PLACED IN .\Objects\ultrasound.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ultrasound.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\ultrasound.lst) OBJECT(.\Objects\ultrasound.obj)
+
+line level    source
+
+   1          #include "ultrasound.h"
+   2          void soundinit(){
+   3   1              TMOD  |= 0x01;
+   4   1              TR0 = 0;
+   5   1              TH0 = 0x00;
+   6   1              TL0 = 0x00;
+   7   1      }
+   8          float soundlen(){
+   9   1              float len;
+  10   1              P2_0 = 0;
+  11   1              P2_0 = 1;
+  12   1              Delay10us();Delay10us();
+  13   1              P2_0 = 0;
+  14   1              while(!P2_1);
+  15   1              TH0 = 0x00;
+  16   1              TL0 = 0x00;
+  17   1              TR0 = 1;
+  18   1              while(P2_1);
+  19   1              TR0 = 0;
+  20   1              len = (float)TH0  * 256  + TL0;
+  21   1              return (len*0.00034/2) * 100;
+  22   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    126    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

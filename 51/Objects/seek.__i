@@ -1,0 +1,1 @@
+"seek.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\seek.lst) OBJECT(.\Objects\seek.obj)

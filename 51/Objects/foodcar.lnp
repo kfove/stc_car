@@ -1,0 +1,11 @@
+".\Objects\main.obj",
+".\Objects\mcontrol.obj",
+".\Objects\buzzer.obj",
+".\Objects\delay.obj",
+".\Objects\display.obj",
+".\Objects\seek.obj",
+".\Objects\uart.obj",
+".\Objects\ultrasound.obj" 
+TO ".\Objects\foodcar" 
+PRINT(".\Listings\foodcar.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 

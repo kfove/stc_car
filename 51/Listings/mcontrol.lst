@@ -1,0 +1,63 @@
+C51 COMPILER V9.54   MCONTROL                                                              04/17/2023 12:28:31 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MCONTROL
+OBJECT MODULE PLACED IN .\Objects\mcontrol.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE mcontrol.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -mcontrol.lst) OBJECT(.\Objects\mcontrol.obj)
+
+line level    source
+
+   1          #include"mcontrol.h"
+   2          
+   3          void moveForward()
+   4          {
+   5   1              P1 &= 0xc3;
+   6   1              P1 |= 0x14;
+   7   1      }
+   8          void moveBack()
+   9          {
+  10   1              P1 &= 0xc3;
+  11   1              P1 |= 0x28;
+  12   1              
+  13   1      }
+  14          void moveLeft()
+  15          {
+  16   1              P1 &= 0xc3;
+  17   1              P1 |= 0x18;
+  18   1      }
+  19          
+  20          void moveRight()
+  21          {
+  22   1              P1 &= 0xc3;
+  23   1              P1 |= 0x24;
+  24   1      }
+  25          void turnLeft()
+  26          {
+  27   1              P1 &= 0xc3;
+  28   1              P1 |= 0x10;
+  29   1      }
+  30          void turnRight()
+  31          {
+  32   1              P1 &= 0xc3;
+  33   1              P1 |= 0x04;
+  34   1      }
+  35          void stopMove()
+  36          {
+  37   1              P1 &= 0xc3;
+  38   1              P1 |= 0x00;
+  39   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     46    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
